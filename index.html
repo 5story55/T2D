@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/324/324104.png"
+    />
+    <title>T2D</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <div id="waitArea">
+        <div id="loader" class="loader"></div>  
+      <h1 id="waitText">נא להמתין מספר שניות</h1>
+      </div>
+      
+      
+      <div id="allContent">
+   בחרי את האורח+שרשרת
+            <input
+            type="text"
+            id="peopleList"
+            list="people"
+            autocomplete="off"
+          />
+          <datalist id="people"> </datalist>
+          
+          <button onclick="submitData()" id="submitData">
+            תלחצי פה לבחירה
+          </button>
+          <button onclick="document.location='panel.html'" id="toPanel">
+            לפאנל
+          </button>
+       <br />
+    בחרי את האורח+שרשרת באנגלית
+            <input
+            type="text"
+            id="peopleListEng"
+            list="peopleEng"
+            autocomplete="off"
+          />
+          <datalist id="peopleEng"> </datalist>
+          
+          <button onclick="submitDataEng()" id="submitData">
+            תלחצי פה לבחירה
+          </button>
+       <br />
+    מה המקום בשרשרת של חרוז זה? (מה המספר?)<input
+      type="number"
+      id="order"
+      name="order"
+      min="1"
+      autocomplete="off"
+    /><br />
+    להעתיק לפה ⇩ את הקישור לסרט5:55 
+    <br /><input
+      type="text"
+      autocomplete="off"
+      id="linkToFive"
+      name="linkToFive"
+      spellcheck="false"
+    /><br />
+    להעתיק לפה ⇩ את הקישור לסרטון של הראיון המלא
+    <br /><input
+      type="text"
+      autocomplete="off"
+      id="linkToFull"
+      name="linkToFull"
+      spellcheck="false"
+    /><br />
+    להעתיק לפה ⇩ את הקישור לפלייליסט
+    <br /><input
+      type="text"
+      autocomplete="off"
+      id="linkToPlaylist"
+      name="linkToPlaylist"
+      spellcheck="false"
+    /><br />
+    להעתיק לפה ⇩ את הקישור לסרטון ההכנה (אם יש)
+    <br /><input
+      type="text"
+      autocomplete="off"
+      id="linkToPrep"
+      name="linkToPrep"
+      spellcheck="false"
+    /><br />
+    להעתיק לפה ⇩ את הקישור לסרטון הסבר על השרשרת (אם יש)
+    <br /><input
+      type="text"
+      autocomplete="off"
+      id="linkToExplain"
+      name="linkToExplain"
+      spellcheck="false"
+    /><br />
+      <table>
+          <tr>
+              <td>
+                  <u>
+                  עברית
+              </u>
+                      </td>
+              <td>
+                  <u>
+                  אנגלית
+                  </u>
+                      </td>
+          </tr>
+      <tr> 
+          <td>
+    <input type="radio" id="longHeb" name="type" value="long" />
+    <label for="longHeb">ראיון 30</label>
+              </td>
+          <td>
+    <input type="radio" id="longEng" name="type" value="long" />
+    <label for="longEng">ראיון 30</label>
+              </td>
+    </tr>
+      <tr>
+          <td>
+    <input
+      type="radio"
+      id="shortHeb"
+      name="type"
+      value="short"
+      checked="checked"
+    />
+    <label for="shortHeb">סרטון 5:55</label>
+          </td>
+              <td>
+    <input
+      type="radio"
+      id="shortEng"
+      name="type"
+      value="short"
+    />
+    <label for="shortEng">סרטון 5:55</label>
+          </td>
+    </tr>
+      <tr>
+          <td>
+    <input type="radio" id="tinyHeb" name="type" value="tiny" />
+    <label for="tinyHeb">short</label>
+         </td>
+           <td>
+    <input type="radio" id="tinyEng" name="type" value="tiny" />
+    <label for="tinyEng">short</label>
+         </td>
+    </tr>
+      <tr>
+          <td>
+    <input type="radio" id="soundHeb" name="type" value="sound" />
+    <label for="soundHeb">סאונד</label>
+              </td>
+           <td>
+    <input type="radio" id="soundEng" name="type" value="sound" />
+    <label for="soundEng">סאונד</label>
+              </td>
+    </tr>
+      <tr>
+          <td>
+    <input type="radio" id="preHeb" name="type" value="pre" />
+    <label for="preHeb">שיחת הכנה</label>
+              </td>
+           <td>
+    <input type="radio" id="preEng" name="type" value="pre" />
+    <label for="preEng">שיחת הכנה</label>
+              </td>
+    </tr>
+      <tr>
+          <td>
+    <input type="radio" id="expHeb" name="type" value="exp" />
+    <label for="expHeb">הסבר על שרשרת</label>
+              </td>
+            <td>
+    <input type="radio" id="expEng" name="type" value="exp" />
+    <label for="expEng">הסבר על שרשרת</label>
+              </td>
+    </tr>
+      <tr>
+          <td>
+    <input type="radio" id="playlistFiveHeb" name="type" value="playlistFive" />
+    <label for="playlistFiveHeb"> תיאור פלייליסט שרשרת5:55</label>
+              </td>
+            <td>
+    <input type="radio" id="playlistFiveEng" name="type" value="playlistFive" />
+    <label for="playlistFiveEng"> תיאור פלייליסט שרשרת5:55</label>
+              </td>
+    </tr>
+      <tr>
+          <td>
+    <input type="radio" id="playlistFullHeb" name="type" value="playlistFull" />
+    <label for="playlistFullHeb">תיאור פלייליסט שרשרת 30</label>
+              </td>
+          <td>
+    <input type="radio" id="playlistFullEng" name="type" value="playlistFull" />
+    <label for="playlistFullEng">תיאור פלייליסט שרשרת 30</label>
+              </td>
+    </tr>
+      <tr>
+          <td>
+    <input type="radio" id="livePostHeb" name="type" value="livePost" />
+    <label for="livePostHeb">פוסט LIVE פייסבוק</label>
+              </td>
+          <td>
+    <input type="radio" id="livePostEng" name="type" value="livePost" />
+    <label for="livePostEng">פוסט LIVE פייסבוק</label>
+              </td>
+    </tr>
+     <tr>
+          <td>
+    <input type="radio" id="fullVideoLiveHeb" name="type" value="livePost" />
+    <label for="fullVideoLiveHeb">ראיון 30 LIVE</label>
+              </td>
+          <td>
+    <input type="radio" id="fullVideoLiveEng" name="type" value="livePost" />
+    <label for="fullVideoLiveEng">ראיון 30 LIVE</label>
+              </td>
+    </tr>
+     <tr>
+          <td>
+    <input type="radio" id="fiveLiveHeb" name="type" value="livePost" />
+    <label for="fiveLiveHeb">סרטון 5:55 LIVE</label>
+              </td>
+          <td>
+    <input type="radio" id="fiveLiveEng" name="type" value="livePost" />
+    <label for="fiveLiveEng">סרטון 5:55 LIVE</label>
+              </td>
+    </tr>  
+        <tr>
+          <td>
+    <input type="radio" id="eventHeb" name="type" value="event" />
+    <label for="eventHeb">אירוע ביומן</label>
+              </td>
+          <td>
+    <input type="radio" id="eventEng" name="type" value="event" />
+    <label for="eventEng">אירוע ביומן</label>
+              </td>
+    </tr> 
+      </table>
+    <button onclick="submit()">בואי נהפוך שיהיה בתבנית</button>
+    <button onclick="reset()">לאפס נתונים</button>
+    <br />
+    <br />
+    <button onclick="copycat('title')" id="titleCopy">להעתקת הכותרת</button>
+    <button onclick="copycat('text')" id="textCopy">להעתקת התיאור</button>
+    <br />
+    
+    <h2 id="title">כך נראית התבנית לפני מילוי הפרטים:</h2>
+    <br />
+    <div id="text"></div>
+    <br />
+    </div>
+    <script src="app2.js"></script> 
+  </body>
+  </html>
+  

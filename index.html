@@ -108,13 +108,19 @@
       spellcheck="false"
     /><br />
       <table>
-     
       <tr> 
           <td>
     <input type="radio" id="long" name="type" value="long" />
     <label for="long">ראיון 30</label>
               </td>
-          
+          <td>
+    <input type="radio" id="livePost" name="type" value="livePost" />
+    <label for="livePost">פוסט LIVE פייסבוק</label>
+              </td>
+          <td>
+    <input type="radio" id="exp" name="type" value="exp" />
+    <label for="exp">הסבר על שרשרת</label>
+              </td>
     </tr>
       <tr>
           <td>
@@ -127,13 +133,29 @@
     />
     <label for="short">סרטון 5:55</label>
           </td>
+            <td>
+    <input type="radio" id="fullVideoLive" name="type" value="livePost" />
+    <label for="fullVideoLive">ראיון 30 LIVE</label>
+              </td>
+           <td>
+    <input type="radio" id="playlistFive" name="type" value="playlistFive" />
+    <label for="playlistFive"> תיאור פלייליסט שרשרת5:55</label>
+              </td>
              
     </tr>
       <tr>
           <td>
     <input type="radio" id="tiny" name="type" value="tiny" />
-    <label for="tiny">short</label>
+    <label for="tiny">shorts</label>
          </td>
+           <td>
+    <input type="radio" id="fiveLive" name="type" value="livePost" />
+    <label for="fiveLive">סרטון 5:55 LIVE</label>
+              </td>
+           <td>
+    <input type="radio" id="playlistFull" name="type" value="playlistFull" />
+    <label for="playlistFull">תיאור פלייליסט שרשרת 30</label>
+              </td>
 
     </tr>
       <tr>
@@ -141,64 +163,15 @@
     <input type="radio" id="sound" name="type" value="sound" />
     <label for="sound">סאונד</label>
               </td>
-         
-    </tr>
-      <tr>
-          <td>
-    <input type="radio" id="livePost" name="type" value="livePost" />
-    <label for="livePost">פוסט LIVE פייסבוק</label>
-              </td>
-          
-    </tr>
-     <tr>
-          <td>
-    <input type="radio" id="fullVideoLive" name="type" value="livePost" />
-    <label for="fullVideoLive">ראיון 30 LIVE</label>
-              </td>
-         
-    </tr>
-     <tr>
-          <td>
-    <input type="radio" id="fiveLive" name="type" value="livePost" />
-    <label for="fiveLive">סרטון 5:55 LIVE</label>
-              </td>
-         
-    </tr>  
-      <tr>
           <td>
     <input type="radio" id="pre" name="type" value="pre" />
     <label for="pre">שיחת הכנה</label>
               </td>
-          
-    </tr>
-      <tr>
-          <td>
-    <input type="radio" id="exp" name="type" value="exp" />
-    <label for="exp">הסבר על שרשרת</label>
-              </td>
-           
-    </tr>
-      <tr>
-          <td>
-    <input type="radio" id="playlistFive" name="type" value="playlistFive" />
-    <label for="playlistFive"> תיאור פלייליסט שרשרת5:55</label>
-              </td>
-           
-    </tr>
-      <tr>
-          <td>
-    <input type="radio" id="playlistFull" name="type" value="playlistFull" />
-    <label for="playlistFull">תיאור פלייליסט שרשרת 30</label>
-              </td>
-   
-    </tr>
-        <tr>
-          <td>
+           <td>
     <input type="radio" id="event" name="type" value="event" />
     <label for="event">אירוע ביומן</label>
               </td>
-    
-    </tr> 
+         </tr>
       </table>
     <button onclick="submit()">להפוך שיהיה בתבנית</button>
     <button onclick="reset()">לאפס נתונים</button>

@@ -738,11 +738,8 @@ function fixTitleTags(str){
     var splitTitle=str.split(" ");
     var newTitle="";
     var limit=4;
-    if(splitTitle.length<limit){
-        limit=splitTitle.length;
-    }
     var i=0;
-    while(i<limit){
+    while(i<splitTitle.length){
         newTitle+=("#"+splitTitle[i].replace(/[^A-Za-z\u0590-\u05FF]/g, "")+" ");
         i++;
     }
@@ -751,10 +748,10 @@ function fixTitleTags(str){
 function fixTags(str){
 
     while (str.includes(".")) {
-        str = str.replace(".", "_");
+        str = str.replace(".", "");
     }
     while (str.includes(" ")) {
-        str = str.replace(" ", "_");
+        str = str.replace(" ", "");
     }
     return str;
 }

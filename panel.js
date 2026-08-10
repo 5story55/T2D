@@ -855,10 +855,10 @@ function fixHour(str) {
 function fixTags(str){
 
     while (str.includes(".")) {
-        str = str.replace(".", "_");
+        str = str.replace(".", "");
     }
     while (str.includes(" ")) {
-        str = str.replace(" ", "_");
+        str = str.replace(" ", "");
     }
     return str;
 }

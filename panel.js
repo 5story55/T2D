@@ -816,6 +816,7 @@ function reset() {
      var testDiv = document.getElementById("text");
     removeAllChildNodes(testDiv);
     document.getElementById("title").innerHTML=""; 
+    document.getElementById("commonTitle").value = "";
   document.getElementById("order").value = "";
   document.getElementById("linkToPlaylist").value = "";
     document.getElementById("chain").value = "";
@@ -1028,6 +1029,9 @@ function swapData4titles(line){
     if(line.includes("order")){
         line=line.replace("order", document.getElementById("order").value);
     }
+    if(line.includes("commonTitle")){
+        line=line.replace("commonTitle", document.getElementById("commonTitle").value);
+    }
     if(line.includes("interviewerName")){
         line=line.replace("interviewerName", selectedData.interviewerName);
     }
@@ -1037,7 +1041,11 @@ function swapData4titles(line){
     return line;
 }
 function swapWithData(line){
-    
+    if(line.includes("commonTitle")){
+        line=line.replace("commonTitle", document.getElementById("commonTitle").value);
+        if(document.getElementById("commonTitle").value==="")
+            line="";
+    }
      if(line.includes("topicOfStory1")){
         line=line.replace("topicOfStory1", selectedData.topicOfStory1);
         if(selectedData.topicOfStory1==="")

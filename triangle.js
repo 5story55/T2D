@@ -66,7 +66,7 @@ var titles={
      triangleEventEng:"",
 };
 var chainDataURL =
-  "https://script.google.com/macros/s/AKfycbz7IgSM1Rhei0PPSgEHwxD_YHtyevYhZt32Mje9asUeGE20_J8a59XYw0xNFJMxjDKXKA/exec";
+  "https://script.google.com/macros/s/AKfycbzFbVdweKuCEHE6V-KqBPHnQw1p0C32OC8E6G-T6-LtynS8Rhtxddakoosw9ONQLCgIMw/exec";
 getData();
 getDataEng();
 getTitlesData();
@@ -289,6 +289,7 @@ function getChainData() {
           name: ele.name,
           altName: ele.othername,
           playlist: ele.playlist,
+            panelplaylist:ele.panelplaylist, 
           description: ele.description,
           about:ele.about,
           participants:ele.participants,
@@ -1097,6 +1098,11 @@ function swapWithData(line){
     if(line.includes("playlistLink")){
         line=line.replace("playlistLink", document.getElementById("linkToPlaylist").value);
         if(document.getElementById("linkToPlaylist").value==="")
+            line="";
+    }
+    if(line.includes("panelPlaylist")){
+        line=line.replace("panelPlaylist", currChain.panelplaylist);
+        if(currChain.panelplaylist==="")
             line="";
     }
     if(line.includes("date")){
